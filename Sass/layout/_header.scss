@@ -1,0 +1,18 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+header {
+    height: 63px;
+    & i {
+        display: none;
+        position: absolute;
+        top: 17px;
+        left: 17px;
+    }
+    & img {
+        display: flex;
+        margin: auto;
+        padding-top: 14px;
+    }
+}

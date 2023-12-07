@@ -1,0 +1,45 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+body, p {
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font: $font-size $font-fam-title;
+}
+
+p, input, input::placeholder {
+  font: $font-weight-text $font-size $font-fam-text;
+}
+
+.search-location {
+  height: 50px;
+  background: $location-background-color;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 17px;
+  align-items: center;
+
+
+  & p {
+    font-weight: 500;
+  }
+
+  & input {
+    border: none;
+    background: $location-background-color;
+    width: 110px;
+    
+    &::placeholder {
+      opacity: 1;
+    }
+
+    &:focus {
+      border-style: none;
+    }
+
+  }  
+}
