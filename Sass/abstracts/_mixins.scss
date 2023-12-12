@@ -2,3 +2,10 @@
 // This file contains all application-wide Sass mixins.
 // -----------------------------------------------------------------------------
 
+@mixin container-column($color-background: $general-background-color, $padding: 40px 20px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: $padding;
+    background: $color-background;
+}

@@ -6,7 +6,7 @@
     <title>Ohmyfood - Homepage</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Shrikhand&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/4fdf36eee2.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="./Assets/CSS/main.css">
@@ -28,39 +28,40 @@
         <section class="intro">
 
             <h1>
-                Reservez le menu qui vous convient
+                Réservez le menu qui vous convient
 
             </h1>
             <p>
                 Decouvrez des restaurants d'exception, selectionné par nos soins.
 
             </p>
-            <a href="">Explorer nos restaurants</a>
+            <a href=""><button class="cta-pink">Explorer nos restaurants</button></a>
 
         </section>
 
         <section class="steps">
-            <H2>Fonctionnement</H2>
-            <div class="steps__btn">
+            <h1>Fonctionnement</h1>
+            <div class="steps__list">
 
-                <div class="steps__btn">
-                    <!-- Ajouter les puces avec le cercle -->
-                    <i></i>
-                    <a href="">Choisissez un restaurant</a>
-
+                <div class="steps__btn">Choisissez un restaurant
+        
+                    <div class="steps__btn--circle">1</div>
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+            
                 </div>
 
-                <div class="steps__btn">
-                    <!-- Ajouter les puces avec le cercle -->
-                    <i></i>
-                    <a href="">Choisissez un restaurant</a>
-
+                <div class="steps__btn">Composez votre menu
+                    
+                    <div class="steps__btn--circle">2</div>
+                    <i class="fa-solid fa-list-ul"></i>
+   
                 </div>
 
-                <div class="steps__btn">
-                    <!-- Ajouter les puces avec le cercle -->
-                    <i></i>
-                    <a href="">Choisissez un restaurant</a>
+                <div class="steps__btn">Dégustez un restaurant
+                  
+                    <div class="steps__btn--circle">3</div>
+                    <i class="fa-solid fa-store"></i>
+
 
                 </div>
             </div>
@@ -69,8 +70,144 @@
 
             
         </section>
-    
+        
+        <section class="list">
+            <h1>Restaurants</h1>
+            <ul>
+                <li>
+                    <a href="./restaurants/la-palette-du-gout.html">
+                        <article class="list__card">
+                            <div class="list__card--new">
+                            <p>Nouveau</p>    
+                            </div>
+                            <img src="./Assets/images/restaurants/cover-palette-du-gout.jpg" alt="La palette du gout">
+
+                            <div class="card__content">
+                                <div class="card__content__text">
+                                    <h2>La palette du goût</h2>
+                                    <h3>Ménilmontant</h3>
+                                </div>
+                                
+                                <div class="container-heart">
+                                    <label for="heart-palette">
+                                    <input type="checkbox" id="heart-palette" name="heart-palette">
+                                    <i class="fa-solid fa-heart"></i>
+                                    <i class="fa-regular fa-heart" id="selected"></i>
+                                    </label>
+
+                                </div>
+                                
+                            </div>
+                        </article>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./restaurants/la-palette-du-gout.html">
+                        <article class="list__card">
+                            <div class="list__card--new">
+                                <p>Nouveau</p>    
+                                </div>
+                            <img src="./Assets/images/restaurants/cover-la-note-enchantee.jpg" alt="La note enchantée">
+
+                            <div class="card__content">
+                                <div class="card__content__text">
+                                    <h2>La note enchantée</h2>
+                                    <h3>Charonne</h3>
+                                </div>
+
+                                <div class="container-heart">
+                                    <label for="heart-enchantee">
+                                    <input type="checkbox" id="heart-enchantee" name="heart-enchantee">
+                                    <i class="fa-solid fa-heart"></i>
+                                    <i class="fa-regular fa-heart" id="selected"></i>
+                                    </label>
+
+                                </div>
+                            </div>
+                        </article>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./restaurants/la-palette-du-gout.html">
+                        <article class="list__card">
+                            <img src="./Assets/images/restaurants/cover-a-la-francaise.jpg" alt="A la française">
+
+                            <div class="card__content">
+                                <div class="card__content__text">
+                                    <h2>À la française</h2>
+                                    <h3>Cité Rouge</h3>
+                                </div>
+
+                                <div class="container-heart">
+                                    <label for="heart-la-francaise">
+                                    <input type="checkbox" id="heart-la-francaise" name="heart-la-francaise">
+                                    <i class="fa-solid fa-heart"></i>
+                                    <i class="fa-regular fa-heart" id="selected"></i>
+                                    </label>
+
+                                </div>
+                            </div>
+                        </article>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./restaurants/la-palette-du-gout.html">
+                        <article class="list__card">
+                            <img src="./Assets/images/restaurants/cover-delice-des-sens.jpg" alt="Le délice des sens">
+
+                            <div class="card__content">
+                                <div class="card__content__text">
+                                    <h2>Le délice des sens</h2>
+                                    <h3>Folie-Méricourt</h3>
+                                </div>
+
+                                <div class="container-heart">
+                                    <label for="heart-delice">
+                                    <input type="checkbox" id="heart-delice" name="heart-delice">
+                                    <i class="fa-solid fa-heart"></i>
+                                    <i class="fa-regular fa-heart" id="selected"></i>
+                                    </label>
+
+                                </div>
+                            </div>
+                        </article>
+                    </a>
+                </li>   
+
+
+                
+            </ul>
+
+        </section>
+
     </main>
+
+    <footer>
+        <img src="./Assets/images/logo/ohmyfood@2x.svg" alt="Ohmyfood">
+
+        <div class="links">
+            <a href="#">
+                <div class="ctn-icon-link">
+                    <i class="fa-solid fa-utensils"></i>
+                    <h4>Proposer un restaurant</h4>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="ctn-icon-link">
+                    <i class="fa-solid fa-handshake-angle"></i>
+                    <h4>Devenir partenaire</h4>
+                </div>
+            </a>
+
+            <a href="#">Mentions légales</a>
+            <a href="#">Contact</a>
+        </div>
+
+    </footer>
     
 </body>
 </html>

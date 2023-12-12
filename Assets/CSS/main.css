@@ -5,14 +5,29 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-body, p {
-  margin: 0; }
+body, h1, h2, h3, h4, p, ul, a {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none; }
 
-h1, h2, h3, h4, h5, h6 {
-  font: 1rem "Shrikhand", serif; }
+h1 {
+  font: 700 24px "Roboto", sans-serif; }
 
-p, input, input::placeholder {
+h2 {
+  font: 700 18px "Roboto", sans-serif; }
+
+h3 {
+  font: 300 17px "Roboto", sans-serif; }
+
+h4 {
+  font: 500 16px "Roboto", sans-serif; }
+
+input, input::placeholder {
   font: 500 1rem "Roboto", sans-serif; }
+
+p {
+  font: 300 18px "Roboto", sans-serif; }
 
 .search-location {
   height: 50px;
@@ -33,11 +48,188 @@ p, input, input::placeholder {
     .search-location input:focus {
       border-style: none; }
 
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 20px;
+  background: #F6F6F6;
+  align-items: center; }
+  .intro h1 {
+    text-align: center;
+    width: 275px;
+    margin-bottom: 10px; }
+  .intro p {
+    text-align: center;
+    color: #353535; }
+  .intro .cta-pink {
+    margin-top: 25px;
+    width: 218px;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    font: 500 16px "Roboto", sans-serif;
+    color: white;
+    background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+    box-shadow: 0px 10px 10px #00000025; }
+    .intro .cta-pink:hover {
+      cursor: pointer; }
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 20px;
+  background: white;
+  gap: 20px; }
+  .steps__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; }
+  .steps__btn {
+    width: 320px;
+    height: 72px;
+    border-radius: 20px;
+    background: #F6F6F6;
+    box-shadow: 0px 5px 10px #00000025;
+    font: 500 1rem "Roboto", sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative; }
+    .steps__btn--circle {
+      position: absolute;
+      left: -12px;
+      width: 24px;
+      height: 24px;
+      background: #9356DC;
+      border-radius: 12px;
+      text-align: center;
+      color: white;
+      font: 500 14px "Roboto", sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    .steps__btn i {
+      position: absolute;
+      font-size: 1.2rem;
+      left: 35px; }
+    .steps__btn .fa-store {
+      filter: invert(36%) sepia(62%) saturate(1145%) hue-rotate(236deg) brightness(97%) contrast(88%); }
+
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 20px;
+  background: #F6F6F6; }
+  .list a {
+    text-decoration: none;
+    color: #000000; }
+  .list__card {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 490px;
+    border-radius: 15px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    background: white; }
+    .list__card--new {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      width: 80px;
+      height: 29px;
+      border-radius: 3px;
+      background-color: #99E2D0; }
+      .list__card--new p {
+        position: absolute;
+        top: 6px;
+        left: 12px;
+        text-align: center;
+        color: #008766;
+        font: 500 14px "Roboto", sans-serif; }
+    .list__card img {
+      width: 100%;
+      height: 175px;
+      max-width: 490px;
+      object-fit: cover;
+      border-radius: 15px 15px 0px 0px; }
+    .list__card .card__content {
+      margin: 15px 10px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center; }
+      .list__card .card__content h3 {
+        padding-top: 5px; }
+      .list__card .card__content .container-heart {
+        position: relative;
+        width: 22px;
+        height: 22px;
+        margin: 15px; }
+        .list__card .card__content .container-heart input[type="checkbox"] {
+          display: none; }
+        .list__card .card__content .container-heart .fa-regular {
+          font-size: 1.4rem;
+          position: absolute; }
+        .list__card .card__content .container-heart .fa-solid {
+          font-size: 1.4rem;
+          position: absolute;
+          display: none; }
+        .list__card .card__content .container-heart input[type="checkbox"]:checked + .fa-solid {
+          color: transparent;
+          display: block;
+          background: linear-gradient(0deg, #FF79DA 0%, #9356DC 100%);
+          background-clip: text; }
+        .list__card .card__content .container-heart input[type="checkbox"]:checked ~ #selected {
+          display: none; }
+      .list__card .card__content .container-heart i:hover {
+        cursor: pointer; }
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 20px;
+  background: #353535;
+  gap: 15px; }
+  footer img {
+    filter: invert(87%) sepia(89%) saturate(0%) hue-rotate(319deg) brightness(107%) contrast(102%);
+    width: 100px;
+    height: 27px; }
+  footer .links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    background: #353535;
+    gap: 7px;
+    font: 300 1rem "Roboto", sans-serif; }
+  footer a {
+    color: white; }
+  footer .ctn-icon-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 10px; }
+    footer .ctn-icon-link i {
+      width: 20px;
+      height: 20px; }
+
 /**
  * Basic typography style for copy text
  */
 header {
-  height: 63px; }
+  height: 63px;
+  box-shadow: 0px 2px 5px #00000025;
+  position: relative; }
   header i {
     display: none;
     position: absolute;

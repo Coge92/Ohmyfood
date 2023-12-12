@@ -7,17 +7,42 @@
 $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
-$location-background-color: #EAEAEA;
+
 $general-background-color: #F6F6F6;
+$location-background-color: #EAEAEA;
+$footer-background-color: #353535;
 
 // Fonts principales :
 
-$font-fam-title: 'Shrikhand', serif;
-$font-fam-text: 'Roboto', sans-serif;
+$font-fam-main: 'Roboto', sans-serif;
+$font-fam-title-restau: 'Shrikhand', serif;
+
+// Fonts Size and Weight
 
 $font-size: 1rem;
+$font-weight-text: 300;
 
-$font-weight-title: 700;
-$font-weight-text: 500;
+$font-fam-h1: $font-fam-main;
+$font-size-h1: 24px;
+$font-weight-h1: 700;
+
+$font-fam-h2: $font-fam-main;
+$font-size-h2: 18px;
+$font-weight-h2: 700;
+
+$font-fam-h3: $font-fam-main;
+$font-size-h3: 17px;
+$font-weight-h3: 300;
+
+$font-fam-h4: $font-fam-main;
+$font-size-h4: 16px;
+$font-weight-h4: 500;
+
+$font-size-middle: 18px;
+$font-weight-middle: 500;
 
 
+
+
+$font-main-color: #000000;
+$font-secondary-color: #353535;

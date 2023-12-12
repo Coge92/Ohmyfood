@@ -2,17 +2,37 @@
 // This file contains very basic styles.
 // -----------------------------------------------------------------------------
 
-body, p {
+body, h1, h2, h3, h4, p, ul, a {
   margin: 0;
+  padding: 0;
+  list-style-type: none; // pour enlever la puce dans la liste
+  text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font: $font-size $font-fam-title;
+h1 {
+  font: $font-weight-h1 $font-size-h1 $font-fam-h1;
 }
 
-p, input, input::placeholder {
-  font: $font-weight-text $font-size $font-fam-text;
+h2 {
+  font: $font-weight-h2 $font-size-h2 $font-fam-h2;
 }
+
+h3 {
+  font: $font-weight-h3 $font-size-h3 $font-fam-h3;
+}
+
+h4 {
+  font: $font-weight-h4 $font-size-h4 $font-fam-h4;
+}
+
+input, input::placeholder {
+  font: $font-weight-middle $font-size $font-fam-main;
+}
+
+p {
+  font: $font-weight-text $font-size-middle $font-fam-main;
+}
+
 
 .search-location {
   height: 50px;
@@ -22,7 +42,6 @@ p, input, input::placeholder {
   justify-content: center;
   gap: 17px;
   align-items: center;
-
 
   & p {
     font-weight: 500;
@@ -42,4 +61,247 @@ p, input, input::placeholder {
     }
 
   }  
+}
+
+.intro {
+  @include container-column;
+  align-items: center;
+
+  & h1 {
+    text-align: center;
+    width: 275px;
+    margin-bottom: 10px;
+  }
+  
+  & p {
+    text-align: center;
+    color: $font-secondary-color;
+  }
+
+  .cta-pink {
+    margin-top: 25px;
+    width: 218px;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    font: $font-weight-h4 $font-size-h4 $font-fam-h4;
+    color: white;
+    background: linear-gradient(0deg, $primary-color 0%, $secondary-color 100%); 
+    box-shadow: 0px 10px 10px #00000025;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+
+}
+
+.steps {
+  @include container-column($color-background: white);
+  gap: 20px;
+
+  & h1 {
+
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &__btn {
+    width: 320px;
+    height: 72px;
+    border-radius: 20px;
+    background: $general-background-color;
+    box-shadow: 0px 5px 10px #00000025;
+   
+    font: $font-weight-middle $font-size $font-fam-main;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    &--circle {
+      position: absolute;
+      left: -12px;
+      width: 24px;
+      height: 24px;
+      background: $primary-color;
+      border-radius: 12px;
+      text-align: center;
+      color: white;
+      font: $font-weight-middle 14px $font-fam-main;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    & i {
+      position: absolute;
+      font-size: 1.2rem;
+      left: 35px;
+
+    }
+
+    .fa-store {
+      filter: invert(36%) sepia(62%) saturate(1145%) hue-rotate(236deg) brightness(97%) contrast(88%);
+       }
+  }
+
+}
+
+.list {
+  @include container-column;
+
+  & a {
+    text-decoration: none;
+    color: $font-main-color;
+  }
+
+  &__card {
+
+    margin-top: 20px;
+    width: 100%;
+    max-width: 490px;
+    border-radius: 15px;
+    position: relative; // pour avoir le block "--new" en position absolut
+
+    @include container-column($color-background: white, $padding: 0); // $color-background en blanc et pas de padding pour ce bloc
+    
+    &--new {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      width: 80px;
+      height: 29px;
+      border-radius: 3px;
+      background-color: #99E2D0;
+
+      p {
+        position: absolute;
+        top: 6px;
+        left: 12px;
+        text-align: center;
+        color: #008766;
+        font: $font-weight-middle 14px $font-fam-main;
+
+      }
+
+    }
+    
+    & img {
+      width: 100%;
+      height: 175px;
+      max-width: 490px;
+      object-fit: cover;
+      border-radius: 15px 15px 0px 0px;
+  
+    }
+    
+    & .card__content {
+      margin: 15px 10px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      
+      h3 {
+        padding-top: 5px;
+      }
+
+      .container-heart {
+
+        position: relative;
+        width: 22px;
+        height: 22px;
+        margin: 15px;
+
+        input[type="checkbox"] {
+          display: none;
+        }
+
+        .fa-regular {
+          font-size: 1.4rem;
+          position: absolute;
+          
+        }
+        .fa-solid {
+          font-size: 1.4rem;
+          position: absolute;
+          display: none;
+          
+        }
+        
+    
+        input[type="checkbox"]:checked + .fa-solid {
+          color: transparent;
+          display: block;
+          background: linear-gradient(0deg, $secondary-color 0%, $primary-color 100%);
+          background-clip: text;
+  
+        }
+
+        input[type="checkbox"]:checked ~ #selected {
+          display: none;
+  
+        }
+      }
+
+      .container-heart i:hover {
+        cursor: pointer;
+      }
+
+    }
+
+  }
+
+
+}
+
+footer {
+     
+  @include container-column($color-background: $footer-background-color, $padding: 20px 20px);
+  gap: 15px;
+  
+  img {
+    filter: invert(87%) sepia(89%) saturate(0%) hue-rotate(319deg) brightness(107%) contrast(102%);
+    width: 100px;
+    height: 27px;
+  }
+
+  .links {
+    @include container-column($color-background: $footer-background-color, $padding: 0);
+    gap: 7px;
+    font: $font-weight-text $font-size $font-fam-main;
+  }
+  
+  a {
+    color: white
+
+  }
+
+  .ctn-icon-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 10px;
+
+    i {
+      width: 20px;
+      height: 20px;
+    }
+
+
+  }
+
+
+
+
 }
