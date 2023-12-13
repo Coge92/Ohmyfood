@@ -8,9 +8,10 @@ header {
     position: relative;
 
     & i {
-        display: none;
         position: absolute;
-        top: 17px;
+        font-size: 1.3rem;
+        color: black;
+        top: 22px;
         left: 17px;
     }
     & img {

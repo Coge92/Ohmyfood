@@ -5,7 +5,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-body, h1, h2, h3, h4, p, ul, a {
+body, h1, h2, h3, h4, p, ul, a, i {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -52,7 +52,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 40px 20px;
+  padding: 40px 15px;
   background: #F6F6F6;
   align-items: center; }
   .intro h1 {
@@ -62,7 +62,7 @@ p {
   .intro p {
     text-align: center;
     color: #353535; }
-  .intro .cta-pink {
+  .intro .intro__btn {
     margin-top: 25px;
     width: 218px;
     height: 50px;
@@ -71,15 +71,20 @@ p {
     font: 500 16px "Roboto", sans-serif;
     color: white;
     background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
-    box-shadow: 0px 10px 10px #00000025; }
-    .intro .cta-pink:hover {
-      cursor: pointer; }
+    box-shadow: 0px 10px 10px #00000025;
+    transform: scale(1);
+    transition: all .4s; }
+    .intro .intro__btn:hover {
+      cursor: pointer;
+      transform: scale(1.01);
+      box-shadow: 0px 10px 10px #00000035;
+      opacity: 0.9; }
 
 .steps {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 40px 20px;
+  padding: 40px 15px;
   background: white;
   gap: 20px; }
   .steps__list {
@@ -124,7 +129,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 40px 20px;
+  padding: 40px 15px;
   background: #F6F6F6; }
   .list a {
     text-decoration: none;
@@ -177,19 +182,21 @@ p {
         .list__card .card__content .container-heart input[type="checkbox"] {
           display: none; }
         .list__card .card__content .container-heart .fa-regular {
-          font-size: 1.4rem;
+          font-size: 1.5rem;
           position: absolute; }
         .list__card .card__content .container-heart .fa-solid {
-          font-size: 1.4rem;
+          font-size: 1.5rem;
           position: absolute;
-          display: none; }
-        .list__card .card__content .container-heart input[type="checkbox"]:checked + .fa-solid {
           color: transparent;
-          display: block;
+          background: none;
+          transform: scale(0) rotate3d(0, 0, 0, 0deg);
+          transition: all .6s; }
+        .list__card .card__content .container-heart input[type="checkbox"]:checked + .fa-solid {
           background: linear-gradient(0deg, #FF79DA 0%, #9356DC 100%);
-          background-clip: text; }
+          background-clip: text;
+          transform: scale(1) rotate3d(0, 1, 0, 360deg); }
         .list__card .card__content .container-heart input[type="checkbox"]:checked ~ #selected {
-          display: none; }
+          color: transparent; }
       .list__card .card__content .container-heart i:hover {
         cursor: pointer; }
 
@@ -231,9 +238,10 @@ header {
   box-shadow: 0px 2px 5px #00000025;
   position: relative; }
   header i {
-    display: none;
     position: absolute;
-    top: 17px;
+    font-size: 1.3rem;
+    color: black;
+    top: 22px;
     left: 17px; }
   header img {
     display: flex;
@@ -241,3 +249,143 @@ header {
     padding-top: 14px; }
 
 /* Juste pour la home */
+#restaurants {
+  position: relative; }
+
+.cover {
+  height: 275px;
+  object-fit: cover;
+  position: relative;
+  z-index: 0; }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 15px 40px 15px;
+  background: #F6F6F6;
+  align-items: center;
+  border-radius: 35px;
+  margin-top: -35px;
+  position: relative;
+  z-index: 4;
+  gap: 35px; }
+  .container__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; }
+  .container h1 {
+    font: 28px "Shrikhand", serif;
+    text-align: center; }
+  .container .container-heart {
+    position: relative;
+    width: 22px;
+    height: 22px;
+    margin: 15px; }
+    .container .container-heart input[type="checkbox"] {
+      display: none; }
+    .container .container-heart .fa-regular {
+      font-size: 1.5rem;
+      position: absolute; }
+    .container .container-heart .fa-solid {
+      font-size: 1.5rem;
+      position: absolute;
+      color: transparent;
+      background: none;
+      transform: scale(0) rotate3d(0, 0, 0, 0deg);
+      transition: all .6s; }
+    .container .container-heart input[type="checkbox"]:checked + .fa-solid {
+      background: linear-gradient(0deg, #FF79DA 0%, #9356DC 100%);
+      background-clip: text;
+      transform: scale(1) rotate3d(0, 1, 0, 360deg); }
+    .container .container-heart input[type="checkbox"]:checked ~ #selected {
+      color: transparent; }
+  .container .container-heart i:hover {
+    cursor: pointer; }
+
+#entree {
+  margin-top: -15px; }
+
+.courses {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+  background: #F6F6F6;
+  gap: 12px;
+  width: 100%;
+  position: relative;
+  z-index: 5; }
+  .courses h2 {
+    font: 300 16px "Roboto", sans-serif; }
+    .courses h2::after {
+      content: "";
+      display: block;
+      height: 0px;
+      width: 40px;
+      border-top: 3px solid #99E2D0;
+      margin-top: 5px; }
+
+.container-btn-choice {
+  position: relative;
+  z-index: 6;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 5px 10px #00000025;
+  display: grid;
+  grid-template-columns: 100% auto;
+  transition: all .4s; }
+
+.btn-choice {
+  padding: 15px; }
+  .btn-choice h3 {
+    font: 500 18px "Roboto", sans-serif; }
+  .btn-choice__details-price {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    .btn-choice__details-price p {
+      font: 300 15px "Roboto", sans-serif; }
+
+.btn-choice__layer {
+  height: 100%;
+  width: 60px;
+  background: #99E2D0;
+  border-radius: 0 15px 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 7; }
+  .btn-choice__layer i {
+    color: white;
+    font-size: 1.4rem;
+    display: none; }
+
+.container-btn-choice:hover {
+  grid-template-columns: calc(100% - 60px) 60px; }
+
+.container-btn-choice:hover ~ .btn-choice__layer {
+  width: 60px; }
+
+.btn-order {
+  display: block;
+  margin-top: 0;
+  width: 218px;
+  height: 50px;
+  border-radius: 25px;
+  border: none;
+  font: 500 16px "Roboto", sans-serif;
+  color: white;
+  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+  box-shadow: 0px 10px 10px #00000025;
+  transform: scale(1);
+  transition: all .4s; }
+  .btn-order:hover {
+    cursor: pointer;
+    transform: scale(1.01);
+    box-shadow: 0px 10px 10px #00000035;
+    opacity: 0.9; }

@@ -2,7 +2,7 @@
 // This file contains very basic styles.
 // -----------------------------------------------------------------------------
 
-body, h1, h2, h3, h4, p, ul, a {
+body, h1, h2, h3, h4, p, ul, a, i {
   margin: 0;
   padding: 0;
   list-style-type: none; // pour enlever la puce dans la liste
@@ -78,19 +78,9 @@ p {
     color: $font-secondary-color;
   }
 
-  .cta-pink {
-    margin-top: 25px;
-    width: 218px;
-    height: 50px;
-    border-radius: 25px;
-    border: none;
-    font: $font-weight-h4 $font-size-h4 $font-fam-h4;
-    color: white;
-    background: linear-gradient(0deg, $primary-color 0%, $secondary-color 100%); 
-    box-shadow: 0px 10px 10px #00000025;
-    &:hover{
-      cursor: pointer;
-    }
+  .intro__btn {
+
+    @include cta-pink;
   }
 
 }
@@ -98,10 +88,6 @@ p {
 .steps {
   @include container-column($color-background: white);
   gap: 20px;
-
-  & h1 {
-
-  }
 
   &__list {
     display: flex;
@@ -216,47 +202,7 @@ p {
         padding-top: 5px;
       }
 
-      .container-heart {
-
-        position: relative;
-        width: 22px;
-        height: 22px;
-        margin: 15px;
-
-        input[type="checkbox"] {
-          display: none;
-        }
-
-        .fa-regular {
-          font-size: 1.4rem;
-          position: absolute;
-          
-        }
-        .fa-solid {
-          font-size: 1.4rem;
-          position: absolute;
-          display: none;
-          
-        }
-        
-    
-        input[type="checkbox"]:checked + .fa-solid {
-          color: transparent;
-          display: block;
-          background: linear-gradient(0deg, $secondary-color 0%, $primary-color 100%);
-          background-clip: text;
-  
-        }
-
-        input[type="checkbox"]:checked ~ #selected {
-          display: none;
-  
-        }
-      }
-
-      .container-heart i:hover {
-        cursor: pointer;
-      }
+      @include heart-like-btn;
 
     }
 
@@ -297,7 +243,6 @@ footer {
       width: 20px;
       height: 20px;
     }
-
 
   }
 

@@ -14,29 +14,127 @@
 <body>
     
     <header>
-        <a href="../Index.html"><img src="../Assets/images/logo/ohmyfood@2x.svg" alt="Ohmyfood"></a>
+        
+        <a href="../Index.html">
+            <i class="fa-solid fa-arrow-left"></i>
+            <img src="../Assets/images/logo/ohmyfood@2x.svg" alt="Ohmyfood"></a>
     </header>
 
-    <main>
-        <img src="../Assets/images/restaurants/cover-palette-du-gout.jpg" alt="La palette du goût" class="cover">
+    <main id="restaurants">
+        <img src="../Assets/images/restaurants/cover-palette-du-gout.jpg" alt="La palette du goût" class="cover">     
 
-        <h1>La palette du goût</h1>
+        <div class="container">
 
-        <section class="entree">
+            <section class="container__header">
+                <h1>La palette du goût</h1>
+                <div class="container-heart">
+                    <label for="heart-palette">
+                    <input type="checkbox" id="heart-palette" name="heart-palette">
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-regular fa-heart" id="selected"></i>
+                    </label>
 
-        </section>
+                </div>
+            </section>
 
-        <section class="plats">
+            <section class="courses" id="entree">
+
+                <h2>ENTRÉES</h2>
+                <div class="container-btn-choice">
+                    <div class="btn-choice">
+                        <h3>Fricassée d'escargots</h3>
+                        <div class="btn-choice__details-price">
+                            <p>Au piment d'Espelette</p>
+                            <p><b>25€</b></p>
+                        </div>
+                    </div>
+                    <div class="btn-choice__layer">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </div>
 
 
-        </section>
-
-        <section class="desserts">
 
 
-        </section>
+                <div class="btn-choice">
+                    <h3>Foie gras de canard mi-cuit</h3>
+                    <div class="btn-choice__details-price">
+                        <p>Et ses copeaux de truffe noire</p>
+                        <p><b>35€</b></p>
+                    </div>
+                </div>
 
-        <a href=""><button class="cta-pink">Commander</button></a>
+                <div class="btn-choice">
+                    <h3>Œuf au plat</h3>
+                    <div class="btn-choice__details-price">
+                        <p>Assaisonné à la truffe sur lit de caviar</p>
+                        <p><b>20€</b></p>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="courses">
+
+                <h2>PLATS</h2>
+                <div class="btn-choice">
+                    <h3>Filet de bœuf aux herbes</h3>
+                    <div class="btn-choice__details-price">
+                        <p>Accompagné de sa ribambelle de légumes</p>
+                        <p><b>40€</b></p>
+                    </div>
+                </div>
+
+                <div class="btn-choice">
+                    <h3>Parmentier de queue de bœuf</h3>
+                    <div class="btn-choice__details-price">
+                        <p>À la truffe noire sur sa purée de panais</p>
+                        <p><b>35€</b></p>
+                    </div>
+                </div>
+
+                <div class="btn-choice">
+                    <h3>Filet de turbot</h3>
+                    <div class="btn-choice__details-price">
+                        <p>Aux agrumes</p>
+                        <p><b>44€</b></p>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="courses">
+
+                <h2>DESSERTS</h2>
+                <div class="btn-choice">
+                    <h3>Paris-Brest</h3>
+                    <div class="btn-choice__details-price">
+                        <p>Revisité</p>
+                        <p><b>18€</b></p>
+                    </div>
+                </div>
+
+                <div class="btn-choice">
+                    <h3>Macaron au chocolat d'exception</h3>
+                    <div class="btn-choice__details-price">
+                        <p>Et glace à la vanille de Madagascar</p>
+                        <p><b>22€</b></p>
+                    </div>
+                </div>
+
+                <div class="btn-choice">
+                    <h3>Mousse au chocolat</h3>
+                    <div class="btn-choice__details-price">
+                        <p>Au piment d'Espelette et à la truffe noire</p>
+                        <p><b>23€</b></p>
+                    </div>
+                </div>
+
+            </section>
+
+            <a href="#"><button class="btn-order">Commander</button></a>
+
+        </div>
 
         
 
@@ -61,7 +159,7 @@
             </a>
 
             <a href="#">Mentions légales</a>
-            <a href="#">Contact</a>
+            <a href="mailto:info@ohmyfood.com">Contact</a>
         </div>
 
     </footer>
