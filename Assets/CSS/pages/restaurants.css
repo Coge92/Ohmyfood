@@ -1,3 +1,167 @@
+#restaurants {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%; }
+
 .cover {
   height: 275px;
-  object-fit: cover; }
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 0; }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 15px 40px 15px;
+  background: #F6F6F6;
+  gap: 35px;
+  max-width: 1055px;
+  align-items: center;
+  border-radius: 35px;
+  margin-top: -35px;
+  position: relative; }
+  .container__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; }
+    @media screen and (min-width: 768px) {
+      .container__header {
+        justify-content: center;
+        gap: 10px; } }
+  .container h1 {
+    font: 28px "Shrikhand", serif;
+    text-align: center; }
+  .container .container-heart {
+    position: relative;
+    width: 22px;
+    height: 22px;
+    margin: 15px; }
+    .container .container-heart input[type="checkbox"] {
+      display: none; }
+    .container .container-heart .fa-regular {
+      font-size: 1.5rem;
+      position: absolute; }
+    .container .container-heart .fa-solid {
+      font-size: 1.5rem;
+      position: absolute;
+      color: transparent;
+      background: none;
+      transform: scale(0) rotate3d(0, 0, 0, 0deg);
+      transition: all .6s; }
+    .container .container-heart input[type="checkbox"]:checked + .fa-solid {
+      background: linear-gradient(0deg, #FF79DA 0%, #9356DC 100%);
+      background-clip: text;
+      transform: scale(1) rotate3d(0, 1, 0, 360deg); }
+    .container .container-heart input[type="checkbox"]:checked ~ #selected {
+      color: transparent; }
+  .container .container-heart i:hover {
+    cursor: pointer; }
+
+#entree {
+  margin-top: -15px; }
+
+.courses {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+  background: #F6F6F6;
+  gap: 12px;
+  width: 100%;
+  max-width: 640px;
+  position: relative;
+  z-index: 5; }
+  .courses h2 {
+    font: 300 16px "Roboto", sans-serif; }
+    .courses h2::after {
+      content: "";
+      display: block;
+      height: 0px;
+      width: 40px;
+      border-top: 3px solid #99E2D0;
+      margin-top: 5px; }
+  .courses input {
+    display: none; }
+
+.container-btn-choice {
+  position: relative;
+  z-index: 6;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 5px 10px #00000025;
+  display: grid;
+  grid-template-columns: 100% auto;
+  transition: all .4s; }
+  .container-btn-choice:hover {
+    cursor: pointer; }
+
+.btn-choice {
+  position: relative;
+  z-index: 2;
+  padding: 15px;
+  background-color: white;
+  border-radius: 15px; }
+  .btn-choice h3 {
+    font: 500 18px "Roboto", sans-serif; }
+  .btn-choice__details-price {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    .btn-choice__details-price p {
+      font: 300 15px "Roboto", sans-serif; }
+
+.btn-choice__layer {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 60px;
+  background: #99E2D0;
+  border-radius: 0 15px 15px 0;
+  opacity: 1; }
+  .btn-choice__layer i {
+    color: white;
+    font-size: 1.4rem;
+    position: absolute;
+    z-index: -1;
+    top: 26px;
+    right: 20px;
+    transform: translateX(45px);
+    opacity: 0;
+    display: none;
+    transition: all .4s ease-in-out; }
+
+input:checked + .container-btn-choice {
+  grid-template-columns: calc(100% - 60px) 60px; }
+
+input:checked + .container-btn-choice i {
+  transform: translateX(0px);
+  opacity: 1;
+  display: block; }
+
+.btn-order {
+  display: block;
+  margin-top: 0;
+  width: 218px;
+  height: 50px;
+  border-radius: 25px;
+  border: none;
+  font: 500 16px "Roboto", sans-serif;
+  color: white;
+  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+  box-shadow: 0px 10px 10px #00000025;
+  transform: scale(1);
+  transition: all .4s; }
+  .btn-order:hover {
+    cursor: pointer;
+    transform: scale(1.01);
+    box-shadow: 0px 10px 10px #00000035;
+    opacity: 0.9; }
