@@ -11,8 +11,11 @@ $font-size-restaurant-title: 28px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    align-items: center;
     
     width: 100%;
+    max-width: 100%;
 
     
 
@@ -24,21 +27,23 @@ $font-size-restaurant-title: 28px;
     object-fit: cover;
     position: relative;
     z-index: 0;
+    display: block;
 }
 
 .container {
-    @include container-column($padding: 20px 15px 40px 15px);
+    @include container-column($padding: 20px 15px 70px 15px);
     gap: 35px;
 
-    
+    width: calc(100% - 30px);
     max-width: 1055px;
 
     align-items: center;
     border-radius: 35px;
+
     margin-top: -35px;
     
     position: relative;
-    
+    z-index: 4;
 
     &__header {
         display: flex;
@@ -70,7 +75,7 @@ $font-size-restaurant-title: 28px;
     @include container-column($padding: 0);
     gap: 12px;
     width: 100%;
-    max-width: 640px;
+    max-width: 768px;
 
     position: relative;
     z-index: 5;
@@ -125,6 +130,9 @@ $font-size-restaurant-title: 28px;
 
     h3 {
         font: 500 18px $font-fam-main;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
 
     &__details-price {
@@ -135,6 +143,12 @@ $font-size-restaurant-title: 28px;
 
         p {
             font: 300 15px $font-fam-main;
+        }
+
+        & > #ellipsis {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
         }
 
     }
@@ -167,9 +181,8 @@ $font-size-restaurant-title: 28px;
         top: 26px;
         right: 20px;
     
-        transform: translateX(45px);
+        transform: translateX(45px) scale(0);
         opacity: 0;
-        display: none;
         transition: all .4s ease-in-out;      
     
     }
@@ -186,8 +199,29 @@ input:checked + .container-btn-choice i {
     
     transform: translateX(0px);
     opacity: 1;
-    display: block;
+}
+
+input:checked + .container-btn-choice b {
+    
+    padding-left: 15px;
+}
   
+
+@media screen and (min-width: 1440px) {
+
+    input:hover + .container-btn-choice {
+
+        grid-template-columns: calc(100% - 60px) 60px;
+        
+    }
+    
+    input:hover + .container-btn-choice i {
+        
+        transform: translateX(0px);
+        opacity: 1;
+      
+        
+    }
     
 }
 
@@ -197,7 +231,4 @@ input:checked + .container-btn-choice i {
     display: block;
     @include cta-pink($margin-top: 0);
 }
-
-
-
 
