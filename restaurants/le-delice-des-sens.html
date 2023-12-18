@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ohmyfood - La palette du goût</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Shrikhand&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4fdf36eee2.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../Assets/CSS/main.css">
+</head>
+<body>
+    
+    <header>
+        
+        <a href="../Index.html">
+            <i class="fa-solid fa-arrow-left"></i>
+            <img src="../Assets/images/logo/ohmyfood@2x.svg" alt="Ohmyfood"></a>
+    </header>
+
+    <main id="restaurant">
+        <img src="../Assets/images/restaurants/cover-delice-des-sens.jpg" alt="La palette du goût" class="cover">     
+
+        <div class="menu">
+
+            <section class="menu__header">
+                <h1>Le délice des sens</h1>
+                <div class="container-heart">
+                    <label for="heart-palette">
+                    <input type="checkbox" id="heart-palette" name="heart-palette">
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-regular fa-heart" id="selected"></i>
+                    </label>
+
+                </div>
+            </section>
+
+            <section class="courses" id="entree">
+
+                <h2>ENTRÉES</h2>
+
+                <label for="selected-entree1">
+                <input type="checkbox" name="selected-entree1" id="selected-entree1">
+                <div class="container-btn-choice">
+                    <div class="btn-choice">
+                        <h3>Tartare de thon</h3>
+                        <div class="btn-choice__details-price">
+                            <p id="ellipsis">Assaisonné au yuzu</p>
+                            <p><b>25€</b></p>
+                        </div>
+                    </div>
+                    <div class="btn-choice__layer">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>                 
+                </div>
+                </label>
+
+
+
+                <label for="selected-entree2">
+                <input type="checkbox" name="selected-entree2" id="selected-entree2">
+                <div class="container-btn-choice">
+                    <div class="btn-choice">
+                        <h3>Bouchée de homard croustillant</h3>
+                        <div class="btn-choice__details-price">
+                            <p id="ellipsis">Et sa farandole de petits légumes</p>
+                            <p><b>35€</b></p>
+                        </div>
+                    </div>
+                    <div class="btn-choice__layer">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>                 
+                </div>
+                </label>
+
+
+
+
+                <label for="selected-entree3">
+                <input type="checkbox" name="selected-entree3" id="selected-entree3">
+                <div class="container-btn-choice">
+                    <div class="btn-choice">
+                        <h3>Velouté de cèpes</h3>
+                        <div class="btn-choice__details-price">
+                            <p id="ellipsis">Aux truffes</p>
+                            <p><b>20€</b></p>
+                        </div>
+                    </div>
+                    <div class="btn-choice__layer">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>                 
+                </div>
+                </label>
+
+            </section>
+
+            <section class="courses" id="main-course">
+
+                <h2>PLATS</h2>
+
+                <label for="selected-course1">
+                <input type="checkbox" name="selected-course1" id="selected-course1">
+                <div class="container-btn-choice">
+                    <div class="btn-choice">
+                        <h3>Poulet rôti aux herbes de Provence </h3>
+                        <div class="btn-choice__details-price">
+                            <p id="ellipsis">Et sa crème de truffe</p>
+                            <p><b>40€</b></p>
+                        </div>
+                    </div>
+                    <div class="btn-choice__layer">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>                 
+                </div>
+                </label>
+
+
+                <label for="selected-course2">
+                <input type="checkbox" name="selected-course2" id="selected-course2">
+                <div class="container-btn-choice">
+                    <div class="btn-choice">
+                        <h3>Langouste rôtie</h3>
+                        <div class="btn-choice__details-price">
+                            <p id="ellipsis">Et ses légumes de saison</p>
+                            <p><b>35€</b></p>
+                        </div>
+                    </div>
+                    <div class="btn-choice__layer">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>                 
+                </div>
+                </label>
+
+                <label for="selected-course3">
+                <input type="checkbox" name="selected-course3" id="selected-course3">
+                <div class="container-btn-choice">
+                    <div class="btn-choice">
+                        <h3>Côte de bœuf Angus</h3>
+                        <div class="btn-choice__details-price">
+                            <p id="ellipsis">Et sa purée de panais</p>
+                            <p><b>44€</b></p>
+                        </div>
+                    </div>
+                    <div class="btn-choice__layer">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>                 
+                </div>
+                </label>
+
+            </section>
+
+            <section class="courses" id="dessert">
+
+                <h2>DESSERTS</h2>
+
+                <label for="selected-dessert1">
+                <input type="checkbox" name="selected-dessert1" id="selected-dessert1">
+                <div class="container-btn-choice">
+                    <div class="btn-choice">
+                        <h3>Farandole de desserts</h3>
+                        <div class="btn-choice__details-price">
+                            <p id="ellipsis">Du chef</p>
+                            <p><b>18€</b></p>
+                        </div>
+                    </div>
+                    <div class="btn-choice__layer">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>                 
+                </div>
+                </label>
+
+                <label for="selected-dessert2">
+                <input type="checkbox" name="selected-dessert2" id="selected-dessert2">
+                <div class="container-btn-choice">
+                    <div class="btn-choice">
+                        <h3>Crème brulée</h3>
+                        <div class="btn-choice__details-price">
+                            <p id="ellipsis">Revisitée</p>
+                            <p><b>22€</b></p>
+                        </div>
+                    </div>
+                    <div class="btn-choice__layer">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>                 
+                </div>
+                </label>
+
+                <label for="selected-dessert3">
+                <input type="checkbox" name="selected-dessert3" id="selected-dessert3">
+                <div class="container-btn-choice">
+                    <div class="btn-choice">
+                        <h3>Tiramisu</h3>
+                        <div class="btn-choice__details-price">
+                            <p id="ellipsis">À la noisette</p>
+                            <p><b>23€</b></p>
+                        </div>
+                    </div>
+                    <div class="btn-choice__layer">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>                 
+                </div>
+                </label>
+
+            </section>
+
+            <a href="#"><button class="btn-order">Commander</button></a>
+
+        </div>     
+
+    </main>
+
+    <footer>
+        <img src="../Assets/images/logo/ohmyfood@2x.svg" alt="Ohmyfood">
+
+        <div class="links">
+            <a href="#">
+                <div class="ctn-icon-link">
+                    <i class="fa-solid fa-utensils"></i>
+                    <h4>Proposer un restaurant</h4>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="ctn-icon-link">
+                    <i class="fa-solid fa-handshake-angle"></i>
+                    <h4>Devenir partenaire</h4>
+                </div>
+            </a>
+
+            <a href="#">Mentions légales</a>
+            <a href="mailto:info@ohmyfood.com">Contact</a>
+        </div>
+
+    </footer>
+    
+</body>
+</html>
