@@ -46,7 +46,8 @@ p {
     .search-location input::placeholder {
       opacity: 1; }
     .search-location input:focus {
-      border-style: none; }
+      border-style: none;
+      outline: none; }
 
 .intro {
   display: flex;
@@ -57,8 +58,10 @@ p {
   align-items: center; }
   .intro h1 {
     text-align: center;
-    width: 275px;
     margin-bottom: 10px; }
+    @media screen and (min-width: 1440px) {
+      .intro h1 {
+        font-size: 40px; } }
   .intro p {
     text-align: center;
     color: #353535; }
@@ -303,6 +306,38 @@ footer {
       height: 85px;
       padding: 0 60px 30px 20px; } }
 
+.loader {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, #FF79DA 0%, #9356DC 100%);
+  z-index: 9998;
+  animation: loader__disappear 3s cubic-bezier(0.46, 0.06, 1, 0.11) forwards; }
+  .loader i {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    z-index: 9999;
+    color: white;
+    animation: loader__heart 5s ease-in; }
+
+@keyframes loader__heart {
+  0% {
+    transform: scale(0); }
+  100% {
+    transform: scale(400); } }
+
+@keyframes loader__disappear {
+  0% {
+    opacity: 1; }
+  99% {
+    width: 100%;
+    height: 100%; }
+  100% {
+    opacity: 0;
+    width: 0;
+    height: 0; } }
+
 /**
  * Basic typography style for copy text
  */
@@ -322,7 +357,7 @@ header {
     padding-top: 14px; }
 
 /* Juste pour la home */
-#restaurants {
+#restaurant {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -339,7 +374,7 @@ header {
   z-index: 0;
   display: block; }
 
-.container {
+.menu {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -353,47 +388,59 @@ header {
   margin-top: -35px;
   position: relative;
   z-index: 4; }
-  .container__header {
+  .menu__header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%; }
     @media screen and (min-width: 768px) {
-      .container__header {
+      .menu__header {
         justify-content: center;
         gap: 10px; } }
-  .container h1 {
+  .menu h1 {
     font: 28px "Shrikhand", serif;
     text-align: center; }
-  .container .container-heart {
+  .menu .container-heart {
     position: relative;
     width: 22px;
     height: 22px;
     margin: 15px; }
-    .container .container-heart input[type="checkbox"] {
+    .menu .container-heart input[type="checkbox"] {
       display: none; }
-    .container .container-heart .fa-regular {
+    .menu .container-heart .fa-regular {
       font-size: 1.5rem;
       position: absolute; }
-    .container .container-heart .fa-solid {
+    .menu .container-heart .fa-solid {
       font-size: 1.5rem;
       position: absolute;
       color: transparent;
       background: none;
       transform: scale(0) rotate3d(0, 0, 0, 0deg);
       transition: all .6s; }
-    .container .container-heart input[type="checkbox"]:checked + .fa-solid {
+    .menu .container-heart input[type="checkbox"]:checked + .fa-solid {
       background: linear-gradient(0deg, #FF79DA 0%, #9356DC 100%);
       background-clip: text;
       transform: scale(1) rotate3d(0, 1, 0, 360deg); }
-    .container .container-heart input[type="checkbox"]:checked ~ #selected {
+    .menu .container-heart input[type="checkbox"]:checked ~ #selected {
       color: transparent; }
-  .container .container-heart i:hover {
+  .menu .container-heart i:hover {
     cursor: pointer; }
 
 #entree {
-  margin-top: -15px; }
+  margin-top: -15px;
+  animation: apparition 1.5s ease-in-out;
+  animation-fill-mode: forwards; }
+
+#main-course {
+  opacity: 0;
+  animation: apparition 1.5s ease-in-out 1.5s;
+  animation-fill-mode: forwards; }
+
+#dessert {
+  opacity: 0;
+  animation: apparition 1.5s ease-in-out 3s;
+  animation-fill-mode: forwards; }
 
 .courses {
   display: flex;
@@ -492,7 +539,6 @@ input:checked + .container-btn-choice b {
     opacity: 1; } }
 
 .btn-order {
-  display: block;
   margin-top: 0;
   width: 218px;
   height: 50px;
@@ -509,3 +555,9 @@ input:checked + .container-btn-choice b {
     transform: scale(1.01);
     box-shadow: 0px 10px 10px #00000035;
     opacity: 0.9; }
+
+@keyframes apparition {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }

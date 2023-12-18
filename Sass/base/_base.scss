@@ -58,6 +58,7 @@ p {
 
     &:focus {
       border-style: none;
+      outline: none;
     }
 
   }  
@@ -69,8 +70,11 @@ p {
 
   & h1 {
     text-align: center;
-    width: 275px;
     margin-bottom: 10px;
+
+    @media screen and (min-width: 1440px) {
+    font-size: 40px;  
+    }
   }
   
   & p {
@@ -103,7 +107,7 @@ p {
   }
 
   &__container {
-    @include container-column($color-background: white, $padding: 0 15px)
+    @include container-column($color-background: white, $padding: 0 15px);
     gap: 20px;
     width: 100%;
     max-width: 375px;
@@ -392,5 +396,38 @@ footer {
   
 }
 
+}
 
+
+
+.loader {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, $secondary-color 0%, $primary-color 100%);
+  z-index: 9998;
+  animation: loader__disappear 3s cubic-bezier(.46,.06,1,.11) forwards;
+  
+
+  i {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    z-index: 9999;
+    color: white;
+    animation: loader__heart 5s ease-in;
+  }
+}
+
+@keyframes loader__heart {
+
+  0% {transform: scale(0);}
+  100% {transform: scale(400);}
+}
+
+@keyframes loader__disappear {
+
+  0% {opacity: 1;}
+  99% {width: 100%; height: 100%;}
+  100% {opacity: 0; width: 0; height: 0;}
 }

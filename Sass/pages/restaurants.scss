@@ -1,4 +1,3 @@
-
 @import
   '../abstracts/variables',
   '../abstracts/functions',
@@ -6,7 +5,7 @@
   
 $font-size-restaurant-title: 28px;
 
-#restaurants {
+#restaurant {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -16,8 +15,6 @@ $font-size-restaurant-title: 28px;
     
     width: 100%;
     max-width: 100%;
-
-    
 
 }
 
@@ -30,7 +27,7 @@ $font-size-restaurant-title: 28px;
     display: block;
 }
 
-.container {
+.menu {
     @include container-column($padding: 20px 15px 70px 15px);
     gap: 35px;
 
@@ -69,6 +66,23 @@ $font-size-restaurant-title: 28px;
 
 #entree {
     margin-top: -15px;
+    animation: apparition 1.5s ease-in-out;
+    animation-fill-mode: forwards;
+
+}
+
+#main-course {
+    
+    opacity: 0;
+    animation: apparition 1.5s ease-in-out 1.5s;
+    animation-fill-mode: forwards;
+}
+
+#dessert {
+
+    opacity: 0;
+    animation: apparition 1.5s ease-in-out 3s;
+    animation-fill-mode: forwards;
 }
 
 .courses {
@@ -96,8 +110,6 @@ $font-size-restaurant-title: 28px;
         display: none;
     }
 }
-
-
 
 .container-btn-choice {
 
@@ -206,7 +218,6 @@ input:checked + .container-btn-choice b {
     padding-left: 15px;
 }
   
-
 @media screen and (min-width: 1440px) {
 
     input:hover + .container-btn-choice {
@@ -225,10 +236,13 @@ input:checked + .container-btn-choice b {
     
 }
 
-
-
 .btn-order {
-    display: block;
     @include cta-pink($margin-top: 0);
 }
 
+@keyframes apparition {
+
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+    
+}
