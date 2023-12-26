@@ -43,7 +43,9 @@
     font: 28px "Shrikhand", serif;
     text-align: center; }
   .menu .container-heart {
-    position: relative;
+    position: static;
+    right: 10px;
+    bottom: 10px;
     width: 22px;
     height: 22px;
     margin: 15px; }
@@ -57,12 +59,12 @@
       position: absolute;
       color: transparent;
       background: none;
-      transform: scale(0) rotate3d(0, 0, 0, 0deg);
+      transform: scale(0);
       transition: all .6s; }
     .menu .container-heart input[type="checkbox"]:checked + .fa-solid {
       background: linear-gradient(0deg, #FF79DA 0%, #9356DC 100%);
       background-clip: text;
-      transform: scale(1) rotate3d(0, 1, 0, 360deg); }
+      transform: scale(1); }
     .menu .container-heart input[type="checkbox"]:checked ~ .selected {
       color: transparent; }
   .menu .container-heart i:hover {
@@ -136,7 +138,7 @@
     justify-content: space-between; }
     .btn-choice__details-price p {
       font: 300 15px "Roboto", sans-serif; }
-    .btn-choice__details-price > #ellipsis {
+    .btn-choice__details-price > .ellipsis {
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis; }

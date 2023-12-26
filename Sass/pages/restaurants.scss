@@ -61,7 +61,7 @@ $font-size-restaurant-title: 28px;
         text-align: center;
     }
 
-    @include heart-like-btn;
+    @include heart-like-btn($position: static);
 }
 
 #entree {
@@ -157,7 +157,7 @@ $font-size-restaurant-title: 28px;
             font: 300 15px $font-fam-main;
         }
 
-        & > #ellipsis {
+        & > .ellipsis {
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;

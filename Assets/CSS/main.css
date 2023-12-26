@@ -238,31 +238,33 @@ p {
       align-items: center; }
       .list__card .card__content h3 {
         padding-top: 5px; }
-      .list__card .card__content .container-heart {
-        position: relative;
-        width: 22px;
-        height: 22px;
-        margin: 15px; }
-        .list__card .card__content .container-heart input[type="checkbox"] {
-          display: none; }
-        .list__card .card__content .container-heart .fa-regular {
-          font-size: 1.5rem;
-          position: absolute; }
-        .list__card .card__content .container-heart .fa-solid {
-          font-size: 1.5rem;
-          position: absolute;
-          color: transparent;
-          background: none;
-          transform: scale(0) rotate3d(0, 0, 0, 0deg);
-          transition: all .6s; }
-        .list__card .card__content .container-heart input[type="checkbox"]:checked + .fa-solid {
-          background: linear-gradient(0deg, #FF79DA 0%, #9356DC 100%);
-          background-clip: text;
-          transform: scale(1) rotate3d(0, 1, 0, 360deg); }
-        .list__card .card__content .container-heart input[type="checkbox"]:checked ~ .selected {
-          color: transparent; }
-      .list__card .card__content .container-heart i:hover {
-        cursor: pointer; }
+    .list__card .container-heart {
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      width: 22px;
+      height: 22px;
+      margin: 15px; }
+      .list__card .container-heart input[type="checkbox"] {
+        display: none; }
+      .list__card .container-heart .fa-regular {
+        font-size: 1.5rem;
+        position: absolute; }
+      .list__card .container-heart .fa-solid {
+        font-size: 1.5rem;
+        position: absolute;
+        color: transparent;
+        background: none;
+        transform: scale(0);
+        transition: all .6s; }
+      .list__card .container-heart input[type="checkbox"]:checked + .fa-solid {
+        background: linear-gradient(0deg, #FF79DA 0%, #9356DC 100%);
+        background-clip: text;
+        transform: scale(1); }
+      .list__card .container-heart input[type="checkbox"]:checked ~ .selected {
+        color: transparent; }
+    .list__card .container-heart i:hover {
+      cursor: pointer; }
 
 footer {
   display: flex;
@@ -404,7 +406,9 @@ header {
     font: 28px "Shrikhand", serif;
     text-align: center; }
   .menu .container-heart {
-    position: relative;
+    position: static;
+    right: 10px;
+    bottom: 10px;
     width: 22px;
     height: 22px;
     margin: 15px; }
@@ -418,12 +422,12 @@ header {
       position: absolute;
       color: transparent;
       background: none;
-      transform: scale(0) rotate3d(0, 0, 0, 0deg);
+      transform: scale(0);
       transition: all .6s; }
     .menu .container-heart input[type="checkbox"]:checked + .fa-solid {
       background: linear-gradient(0deg, #FF79DA 0%, #9356DC 100%);
       background-clip: text;
-      transform: scale(1) rotate3d(0, 1, 0, 360deg); }
+      transform: scale(1); }
     .menu .container-heart input[type="checkbox"]:checked ~ .selected {
       color: transparent; }
   .menu .container-heart i:hover {
@@ -497,7 +501,7 @@ header {
     justify-content: space-between; }
     .btn-choice__details-price p {
       font: 300 15px "Roboto", sans-serif; }
-    .btn-choice__details-price > #ellipsis {
+    .btn-choice__details-price > .ellipsis {
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis; }

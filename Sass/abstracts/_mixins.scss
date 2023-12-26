@@ -12,13 +12,17 @@
     
 }
 
-@mixin heart-like-btn {
+@mixin heart-like-btn($position: absolute) {
 .container-heart {
 
-    position: relative;
+    position: $position;
+    right: 10px;
+    bottom: 10px;
+    
     width: 22px;
     height: 22px;
     margin: 15px;
+
     
 
     input[type="checkbox"] {
@@ -37,7 +41,7 @@
       position: absolute;
       color: transparent;
       background: none;
-      transform: scale(0) rotate3d(0, 0, 0, 0deg);
+      transform: scale(0);
       transition: all .6s;
       
     }
@@ -46,7 +50,7 @@
     input[type="checkbox"]:checked + .fa-solid {
         background: linear-gradient(0deg, $secondary-color 0%, $primary-color 100%);
         background-clip: text;
-        transform: scale(1) rotate3d(0, 1, 0, 360deg);
+        transform: scale(1);
         
     }
 
