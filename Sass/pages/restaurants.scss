@@ -201,32 +201,34 @@ $font-size-restaurant-title: 28px;
     
 }
 
-input:checked + .container-btn-choice {
+
+.container-btn-choice:hover {
 
     grid-template-columns: calc(100% - 60px) 60px;
     
 }
 
-input:checked + .container-btn-choice i {
+
+.container-btn-choice:hover i {
     
     transform: translateX(0px);
     opacity: 1;
 }
 
-input:checked + .container-btn-choice b {
+.container-btn-choice:hover b {
     
     padding-left: 15px;
 }
   
 @media screen and (min-width: 1440px) {
 
-    input:hover + .container-btn-choice {
+    .container-btn-choice:hover {
 
         grid-template-columns: calc(100% - 60px) 60px;
         
     }
     
-    input:hover + .container-btn-choice i {
+    .container-btn-choice:hover i {
         
         transform: translateX(0px);
         opacity: 1;
