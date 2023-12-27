@@ -60,7 +60,6 @@ p {
       border-style: none;
       outline: none;
     }
-
   }  
 }
 
@@ -86,7 +85,6 @@ p {
 
     @include cta-pink;
   }
-
 }
 
 .steps {
@@ -99,7 +97,6 @@ p {
   @media screen and (min-width: 768px) {
 
     padding: 40px 15%;
-  
   }
 
   h1 {
@@ -115,11 +112,8 @@ p {
     @media screen and (min-width: 768px) {
 
       max-width: none;
-    
     }
-
   }
-
 
   &__stage {
     display: flex;
@@ -136,7 +130,6 @@ p {
 
       flex-direction: row;
       gap: 30px;
-      
     }
   }
 
@@ -176,14 +169,12 @@ p {
       position: absolute;
       font-size: 1.2rem;
       left: 35px;
-
     }
 
     .fa-store {
       filter: invert(36%) sepia(62%) saturate(1145%) hue-rotate(236deg) brightness(97%) contrast(88%);
-       }
+      }
   }
-
 }
 
 .list {
@@ -201,16 +192,8 @@ p {
 
       h1 {
         margin-left: -15px;
-        
-        
-        
       }
-    
     }
-
-
-
-
 
   &__container {
 
@@ -218,26 +201,10 @@ p {
 
     width: 100%;
 
-    
-
       @media screen and (max-width: 768px) {
         
       max-width: 375px;
-
       }
-
-
-      @media screen and (min-width: 768px) and (max-width: 1440px){
-      
-      
-        
-      }
-
-      @media screen and (min-width: 1440px) {
-
-
-      }
-
     }
 
 
@@ -251,7 +218,6 @@ p {
       flex-direction: row;
       justify-content: center;
       flex-wrap: wrap;
-
     }
 
     @media screen and (min-width: 1440px) {
@@ -260,7 +226,6 @@ p {
       justify-content: space-between;
       flex-wrap: wrap;
       row-gap: 50px;
-      
     }
   }
 
@@ -269,10 +234,8 @@ p {
 
     @media screen and (min-width: 768px) {
 
-      min-width: 490px;
-      
+      min-width: 490px; 
     }
-  
   }
 
 
@@ -330,16 +293,9 @@ p {
       h3 {
         padding-top: 5px;
       }
-
-      
-
     }
-
     @include heart-like-btn;
-
   }
-
-
 }
 
 footer {
@@ -371,7 +327,6 @@ footer {
   
   a {
     color: white
-
   }
 
   .ctn-icon-link {
@@ -397,7 +352,6 @@ footer {
   padding: 0 60px 30px 20px;
   
 }
-
 }
 
 

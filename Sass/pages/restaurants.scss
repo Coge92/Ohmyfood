@@ -15,7 +15,6 @@ $font-size-restaurant-title: 28px;
     
     width: 100%;
     max-width: 100%;
-
 }
 
 .cover {
@@ -53,7 +52,6 @@ $font-size-restaurant-title: 28px;
             justify-content: center;
             gap: 10px;
         }
-
     }
 
     h1 {
@@ -128,7 +126,6 @@ $font-size-restaurant-title: 28px;
     &:hover {
         cursor: pointer;
     }
-
 }
 
 .btn-choice {
@@ -162,9 +159,7 @@ $font-size-restaurant-title: 28px;
             white-space: nowrap;
             text-overflow: ellipsis;
         }
-
     }
-
 }
 
 .btn-choice__layer {
@@ -195,17 +190,13 @@ $font-size-restaurant-title: 28px;
     
         transform: translateX(45px) scale(0);
         opacity: 0;
-        transition: all .4s ease-in-out;      
-    
-    }
-    
+        transition: all .4s ease-in-out;        
+    }   
 }
-
 
 .container-btn-choice:hover {
 
-    grid-template-columns: calc(100% - 60px) 60px;
-    
+    grid-template-columns: calc(100% - 60px) 60px; 
 }
 
 
@@ -232,10 +223,7 @@ $font-size-restaurant-title: 28px;
         
         transform: translateX(0px);
         opacity: 1;
-      
-        
-    }
-    
+    }   
 }
 
 .btn-order {
@@ -245,6 +233,5 @@ $font-size-restaurant-title: 28px;
 @keyframes apparition {
 
     0% {opacity: 0;}
-    100% {opacity: 1;}
-    
+    100% {opacity: 1;}  
 }
